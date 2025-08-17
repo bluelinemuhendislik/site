@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blue Line Otomasyon Mühendislik</title>
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="content/css/style.css" />
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="mycontainer d-flex justify-content-between align-items-center py-2">
+      <div class="header-logo">
+        <a href="#"><img src="content/images/bluelinefoto.png" alt="Blue Line Otomasyon Logo"
+            style="margin-top: 30px;" /></a>
+      </div>
+      <nav class="header-nav d-none d-md-block">
+        <ul class="d-flex gap-3 list-unstyled mb-0">
+          <li><a href="#corporate">KURUMSAL</a></li>
+          <li><a href="#services">HİZMETLER</a></li>
+          <li><a href="#sector">SEKTÖRLER</a></li>
+          <li><a href="#contact">İLETİŞİM</a></li>
+        </ul>
+      </nav>
+      <div class="mini-menu-btn d-md-none" onclick="showmenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- MINI MENU -->
+  <div class="mini-menu">
+    <div class="mycontainer">
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="mini-menu-close" onclick="minimenuclose()">
+          <span>
+            <i class="fa-solid fa-xmark fa-2x" style="color:white;"></i>
+          </span>
+        </div>
+      </div>
+      <div class="mini-menu-content mt-4">
+        <ul class="list-unstyled">
+          <li><a href="#corporate" onclick="navclose()">KURUMSAL</a></li>
+          <li><a href="#services" onclick="navclose()">HİZMETLER</a></li>
+          <li><a href="#sector" onclick="navclose()">SEKTÖRLER</a></li>
+          <li><a href="#contact" onclick="navclose()">İLETİŞİM</a></li>
+        </ul>
+      </div>
+      <div class="mini-menu-contact mt-5">
+        <h5>Adres</h5>
+        <p>ADRES</p>
+      </div>
+      <div class="mini-menu-contact">
+        <h5>Müşteri Hizmetleri</h5>
+        <a href="tel:+905511060337" style="color:#00c6ae;">+90 551 106 03 37</a>
+      </div>
+      <div class="mini-menu-contact">
+        <h5>Mail</h5>
+        <a href="mailto:eneskaradag@gmail.com" style="color:#00c6ae;">eneskaradag@gmail.com</a>
+      </div>
+
+      <div class="mini-menu-social mt-3">
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+          <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+          <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-x-twitter"></i></a></li>
+          <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mini WhatsApp Contact Button -->
+  <div class="mini-contact">
+    <div class="mini-contact-wp">
+      <a href="https://wa.me/905511060337" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+
+  <!-- Overlay Alert Container -->
+  <!-- Overlay Alert Container -->
+  <div id="alertOverlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+background: rgba(0,0,0,0.5); z-index: 9999; align-items: center; justify-content: center;">
+    <div id="successAlert" class="alert alert-success position-relative"
+      style="max-width: 400px; margin: 20px; transition: opacity 0.5s ease-in-out;">
+
+      <!-- Kapatma Butonu -->
+      <button type="button" class="btn-close position-absolute top-0 end-0 m-2" aria-label="Close"
+        onclick="closeAlert()"></button>
+
+      <i class="fas fa-check-circle me-2"></i>
+      <strong>Başarılı!</strong> Mesajınız başarıyla gönderildi. En kısa sürede size dönüş yapacağız.
+      <br>
+      <small class="text-muted">Bu mesaj kısa sürede kaybolacak</small>
+    </div>
+  </div>
+
+
+  <!-- Slider -->
+
+  <div class="home-slider mt-5">
+    <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner rounded-4 shadow">
+        <div class="carousel-item active">
+          <img src="content/images/slider1.jpg" class="d-block w-100" alt="Slider 1" />
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+            <h5>Blue Line Otomasyon</h5>
+            <p>İnovatif Endüstriyel Otomasyon Çözümleri</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="content/images/slider2.jpg" class="d-block w-100" alt="Slider 2" />
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+            <h5>SCADA ve PLC Sistemleri</h5>
+            <p>Uzaktan İzleme ve Kontrol Teknolojileri</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="content/images/slider3.jpg" class="d-block w-100" alt="Slider 3" />
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+            <h5>Enerji İzleme Sistemleri</h5>
+            <p>Verimlilik ve Tasarruf Odaklı Çözümler</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Önceki</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Sonraki</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Kurumsal -->
+  <section class="home-corporate py-5" id="corporate">
+    <div class="mycontainer container">
+
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <img src="content/images/corporate.jpg" alt="kurumsal" class="img-fluid rounded shadow" />
+        </div>
+        <div class="col-lg-6">
+          <div class="corporate-text">
+            <h2>Kurumsal</h2>
+            <p>
+            <h4>Otomasyonla Verimlilik, Teknolojiyle Gelecek yazdır renkli</h4>
+            Firmamız, endüstriyel otomasyon ve elektrik sistemleri alanında
+            faaliyet gösteren, müşteri odaklı ve teknolojiye yön veren bir
+            mühendislik firmasıdır. Kurulduğumuz günden bu yana, sanayi
+            tesislerinin ihtiyaç duyduğu otomasyon çözümlerini yüksek kalite
+            standartlarıyla sunmayı ilke edindik. Yüksek mühendislik bilgisi
+            ve sahadaki deneyimimizi birleştirerek; PLC, SCADA, pano
+            imalatı, enerji izleme ve makine otomasyonu gibi alanlarda
+            yenilikçi ve sürdürülebilir çözümler geliştiriyoruz. Her biri
+            alanında uzman teknik kadromuzla, projelendirmeden devreye
+            almaya kadar tüm süreçlerde profesyonel destek sağlıyoruz.
+            Misyonumuz; müşterilerimizin üretim süreçlerini daha verimli,
+            güvenli ve kontrol edilebilir hale getirmek; vizyonumuz ise
+            Türkiye’de ve dünyada tercih edilen otomasyon firmaları arasında
+            yer almaktır.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hizmetler -->
+  <section class="home-services py-5 bg-secondary" id="services">
+    <div class="mycontainer container text-white">
+      <h2>Hizmetlerimiz</h2>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="home-work-box">
+            <div class="home-work-box-image">
+              <img src="content/images/resimler/plc_otomasyon.jpg" alt="PLC Otomasyon Sistemleri" />
+              <div class="home-work-num">1</div>
+            </div>
+            <div class="home-work-box-text">
+              <h5>PLC Otomasyon Sistemleri</h5>
+              <p>Endüstriyel makinelerin otomatik çalışmasını sağlayan PLC tabanlı kontrol sistemlerinin kurulumu,
+                programlanması ve devreye alınması.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="home-work-box">
+            <div class="home-work-box-image">
+              <img src="content/images/resimler/SCADA.jpg" alt="SCADA & HMI Sistemleri" />
+              <div class="home-work-num">2</div>
+            </div>
+            <div class="home-work-box-text">
+              <h5>SCADA & HMI Sistemleri</h5>
+              <p>Üretim süreçlerinin uzaktan izlenmesi ve kontrol edilmesini sağlayan SCADA yazılımları ve dokunmatik
+                HMI panel entegrasyonu.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="home-work-box">
+            <div class="home-work-box-image">
+              <img src="content/images/resimler/MakineOtomasyonu.png" alt="Makine Otomasyonu" />
+              <div class="home-work-num">3</div>
+            </div>
+            <div class="home-work-box-text">
+              <h5>Makine Otomasyonu</h5>
+              <p>Üretim hatlarında kullanılan makinelerin verimli çalışmasını sağlayan özel otomasyon çözümleri ve
+                sensör
+                entegrasyonları.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="home-work-box">
+            <div class="home-work-box-image">
+              <img src="content/images/resimler/MakineMontaj.jpg" alt="Enerji İzleme Sistemleri" />
+              <div class="home-work-num">4</div>
+            </div>
+            <div class="home-work-box-text">
+              <h5>Makine Montaj ve Demontaj</h5>
+              <p>Fabrika taşınmasının en büyük zorluğu makinaların sökülerek yeni yerine taşınıp montajının
+                yapılmasıdır.Makinalarınızı yerinden söküyor ,taşımasını yapıyor ve montajını yapıyoruz.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="home-work-box">
+            <div class="home-work-box-image">
+              <img src="content/images/resimler/ProjeDanismanlik.png" alt="Proje Danışmanlığı ve Teknik Destek" />
+              <div class="home-work-num">5</div>
+            </div>
+            <div class="home-work-box-text">
+              <h5>Proje Danışmanlığı ve Teknik Destek</h5>
+              <p>Yeni yatırımlar, otomasyon revizyonları ve sistem iyileştirmeleri için mühendislik danışmanlığı ve
+                sürekli teknik destek hizmeti.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="home-work-box">
+            <div class="home-work-box-image">
+              <img src="content/images/resimler/ServisHizmeti.jpg" alt="Proje Danışmanlığı ve Teknik Destek" />
+              <div class="home-work-num">6</div>
+            </div>
+            <div class="home-work-box-text">
+              <h5>SERVİS HİZMETİ</h5>
+              <p>Motor sürücülerden endüstriyel bilgisayarlara,
+                güç kaynaklarına, medikal cihazlara varan servis
+                skalamızla yüksek teknolojili elektronik kart ve cihazlarınızın tamirini güvenle yapıyoruz.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="home-work-box">
+            <div class="home-work-box-image">
+              <img src="content/images/resimler/ServeMotor.jpg" alt="Proje Danışmanlığı ve Teknik Destek" />
+              <div class="home-work-num">7</div>
+            </div>
+            <div class="home-work-box-text">
+              <h5>AC-DC SERVOMOTOR DÖNÜŞÜMLERİ</h5>
+              <p>Servo Motorlar Endüstriyel kontrol alanındaki
+                teknolojik gelişmeler birçok özel motorun
+                ortadan kalkmasına neden olmuştur.Böylece üstün bir performans ve esneklik sağlanmıştır.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Sektörler -->
+  <section class="home-sector py-5" id="sector">
+    <div class="mycontainer container">
+      <h2>Sektörler</h2>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="home-work-box">
+            <div class="home-work-box-image">
+              <img src="content/images/resimler/makineveimalat.jpeg" alt="Makine İmalat Sanayi" />
+            </div>
+            <div class="home-work-box-text">
+              <h5>⚙️ Makine İmalat Sanayi</h5>
+              <p>CNC makineler, robot kollar, paketleme sistemleri gibi alanlarda otomasyon sistemleriyle verimlilik
+                artırılır.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="home-work-box">
+            <div class="home-work-box-image">
+              <img src="content/images/resimler/gıdavesanayi.jpg" alt="Gıda ve İçecek Sanayi" />
+            </div>
+            <div class="home-work-box-text">
+              <h5>🍶 Gıda ve İçecek Sanayi</h5>
+              <p>Dolum, etiketleme, ambalajlama gibi süreçlerde hijyenik ve hızlı üretim için otomasyon çözümleri
+                kullanılır.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="home-work-box">
+            <div class="home-work-box-image">
+              <img src="content/images/resimler/kimyaPetrokimya.png" alt="Petrokimya ve Kimya Sanayi" />
+            </div>
+            <div class="home-work-box-text">
+              <h5>⛽ Petrokimya ve Kimya Sanayi</h5>
+              <p>Basınç, sıcaklık ve akış kontrolü gerektiren tesislerde SCADA ve PLC sistemleriyle hassas üretim
+                sağlanır.Dekantör ve Seperatör otomasyon sistemleri ile hizmet vermekteyiz. </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="home-work-box">
+            <div class="home-work-box-image">
+              <img src="content/images/resimler/cimento.png" alt="İnşaat ve Çimento Sektörü" />
+            </div>
+            <div class="home-work-box-text">
+              <h5>🏗️ İnşaat ve Çimento Sektörü</h5>
+              <p>Kırma, eleme, taşıma sistemlerinin otomatik kontrolü ve izlenmesi sağlanır.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="home-work-box">
+            <div class="home-work-box-image">
+              <img src="content/images/resimler/suatik.jpeg" alt="Su ve Atık Su Arıtma Tesisleri" />
+            </div>
+            <div class="home-work-box-text">
+              <h5>�� Su ve Atık Su Arıtma Tesisleri</h5>
+              <p>Pompa istasyonları, vana sistemleri ve seviye kontrolü gibi işlemler SCADA ile yönetilir.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="home-work-box">
+            <div class="home-work-box-image">
+              <img src="content/images/resimler/otomativ.jpg" alt="Otomotiv Sanayi" />
+            </div>
+            <div class="home-work-box-text">
+              <h5>🚗 Otomotiv Sanayi</h5>
+              <p>Kaynak robotları, montaj hatları ve test istasyonlarında tam otomatik üretim hatları kurulur.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- İLETİŞİM VE ÖNERİ -->
+  <section class="contact-section py-5 bg-secondary" id="contact">
+    <div class="mycontainer container text-white">
+      <div class="row">
+        <div class="col-lg-6">
+          <h2>Bize Ulaşın</h2>
+          <p class="mb-4">Projeleriniz için önerilerinizi ve sorularınızı bizimle paylaşın. Size en kısa sürede dönüş
+            yapacağız.</p>
+
+          <div class="contact-info">
+            <div class="contact-item mb-3">
+              <i class="fas fa-phone me-3" style="color: var(--accent2);"></i>
+              <a href="tel:+905511060337" class="text-white text-decoration-none">+90 551 106 03 37</a>
+            </div>
+            <div class="contact-item mb-3">
+              <i class="fas fa-envelope me-3" style="color: var(--accent2);"></i>
+              <a href="mailto:eneskaradag@gmail.com" class="text-white text-decoration-none">eneskaradag@gmail.com</a>
+            </div>
+            <div class="contact-item mb-3">
+              <i class="fas fa-map-marker-alt me-3" style="color: var(--accent2);"></i>
+              <span>Konya, Türkiye</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="contact-form-box">
+            <h3>Öneri ve Mesajınız</h3>
+            <form id="contactForm" method="post">
+              <div class="mb-3">
+                <label for="name" class="form-label">Adınız Soyadınız *</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+              </div>
+
+              <div class="mb-3">
+                <label for="email" class="form-label">E-posta Adresiniz *</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+              </div>
+
+              <div class="mb-3">
+                <label for="phone" class="form-label">Telefon Numaranız</label>
+                <input type="tel" class="form-control" id="phone" name="phone">
+              </div>
+
+              <div class="mb-3">
+                <label for="subject" class="form-label">Konu *</label>
+                <select class="form-select" id="subject" name="subject" required>
+                  <option value="">Konu Seçiniz</option>
+                  <option value="PLC Otomasyon">PLC Otomasyon</option>
+                  <option value="SCADA Sistemleri">SCADA Sistemleri</option>
+                  <option value="Makine Otomasyonu">Makine Otomasyonu</option>
+                  <option value="Enerji İzleme">Enerji İzleme</option>
+                  <option value="Proje Danışmanlığı">Proje Danışmanlığı</option>
+                  <option value="Servis Hizmeti">Servis Hizmeti</option>
+                  <option value="Diğer">Diğer</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label for="message" class="form-label">Mesajınız/Öneriniz *</label>
+                <textarea class="form-control" id="message" name="message" rows="5"
+                  placeholder="Projeniz hakkında detayları ve önerilerinizi buraya yazabilirsiniz..."
+                  required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary w-100">
+                <i class="fas fa-paper-plane me-2"></i>Mesaj Gönder
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-secondary py-4">
+    <div class="mycontainer container text-center">
+      <img src="content/images/bluelinefoto.png" alt="Blue Line Otomasyon Logo" class="mb-3"
+        style="max-height: 350px;" />
+      <p>Copyright © 2025, Tüm Hakları Saklıdır.</p>
+      <div class="footer-social">
+        <a href="#" class="text-secondary me-3"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="text-secondary me-3"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-secondary me-3"><i class="fab fa-x-twitter"></i></a>
+        <a href="#" class="text-secondary"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="content/js/owl.carousel.min.js"></script>
+
+
+
+  <script>
+    let calcScrollValue = () => {
+      let pos = document.documentElement.scrollTop;
+      let header = document.querySelector("header");
+
+      if (pos > 0) {
+        header.classList.add("active");
+      } else {
+        header.classList.remove("active");
+      }
+    };
+    window.onscroll = calcScrollValue;
+    window.onload = function () {
+      calcScrollValue();
+
+      // Sayfa yüklendiğinde alert'i gizle
+      const alertOverlay = document.getElementById('alertOverlay');
+      if (alertOverlay) {
+        alertOverlay.style.display = 'none';
+      }
+    };
+    function closeAlert() {
+      const successAlert = document.getElementById('successAlert');
+      const alertOverlay = document.getElementById('alertOverlay');
+      successAlert.style.opacity = '0';
+      setTimeout(function () {
+        alertOverlay.style.display = 'none';
+        successAlert.style.opacity = '1';
+      }, 500);
+    }
+
+
+    function showmenu() {
+      document.querySelector(".mini-menu").classList.add("active");
+      document.querySelector("body").classList.add("passive");
+      document.querySelector("header").classList.remove("active");
+      let hlogo = document.querySelector(".header-logo img");
+      hlogo.src = "content/images/bluelinefoto.jpg";
+    }
+    function minimenuclose() {
+      document.querySelector(".mini-menu").classList.remove("active");
+      document.querySelector("body").classList.remove("passive");
+      document.querySelector("header").classList.add("active");
+      let hlogo = document.querySelector(".header-logo img");
+      hlogo.src = "content/images/bluelinefoto.jpg";
+    }
+    function navclose() {
+      document.querySelector(".mini-menu").classList.remove("active");
+      document.querySelector("body").classList.remove("passive");
+    }
+
+    // Form submit işlemi
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // Form verilerini al
+      const formData = new FormData(this);
+      const name = formData.get('name');
+      const email = formData.get('email');
+      const phone = formData.get('phone');
+      const subject = formData.get('subject');
+      const message = formData.get('message');
+
+      // Loading göster
+      const submitBtn = this.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerHTML;
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Gönderiliyor...';
+      submitBtn.disabled = true;
+
+      // Google Apps Script Web App'e gönder
+      const scriptFormData = new FormData();
+      scriptFormData.append('Date', new Date());
+      scriptFormData.append('Name', name);
+      scriptFormData.append('Email', email);
+      scriptFormData.append('Phone', phone || '');
+      scriptFormData.append('Subject', subject);
+      scriptFormData.append('Message', message);
+
+      // Google Apps Script'e gönder
+      fetch('https://script.google.com/macros/s/AKfycbwio7do8LPH6EfcMfUxctTrFi1-oglzcE3-qLikxcHZiwWmL99E6Kh-Ip_16-Pemi20/exec', {
+        method: 'POST',
+        body: scriptFormData
+      })
+        .then(response => {
+          console.log('Response status:', response.status);
+          if (response.ok) {
+            return response.json();
+          } else {
+            throw new Error('Network response was not ok');
+          }
+        })
+        .then(data => {
+          console.log('Success:', data);
+
+          // Başarı alert'ini göster
+          const alertOverlay = document.getElementById('alertOverlay');
+          const successAlert = document.getElementById('successAlert');
+          alertOverlay.style.display = 'flex';
+          successAlert.style.opacity = '1';
+
+          // Formu temizle
+          document.getElementById('contactForm').reset();
+          setTimeout(closeAlert, 3500);
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          alert('Mesaj gönderilemedi. Lütfen tekrar deneyin.');
+        })
+        .finally(() => {
+          // Button'u eski haline getir
+          submitBtn.innerHTML = originalText;
+          submitBtn.disabled = false;
+
+        });
+
+      // 3.5 saniye sonra alert'i yavaşça gizle
+      setTimeout(function () {
+        const successAlert = document.getElementById('successAlert');
+        const alertOverlay = document.getElementById('alertOverlay');
+        if (successAlert && alertOverlay) {
+          successAlert.style.opacity = '0';
+          setTimeout(function () {
+            alertOverlay.style.display = 'none';
+            successAlert.style.opacity = '1';
+          }, 500);
+        }
+      }, 3500);
+    });
+  </script>
+</body>
+
+</html>
