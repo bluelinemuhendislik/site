@@ -103,7 +103,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 115px;
+    height: 100px; /* Adjusted header height for desktop */
     background: rgba(36, 40, 50, 0.85);
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
     border-bottom: 1px solid var(--card-bg);
@@ -120,10 +120,8 @@ header.active {
 }
 
 .header-logo img {
-    max-width: 500px; /* Adjusted max-width for desktop */
-    max-height: 250px; /* Adjusted max-height for desktop */
-    width: 100%;
-    height: auto;
+    width: 150px; /* Direct width for desktop */
+    height: 75px; /* Direct height for desktop */
     object-fit: contain;
     border-radius: 6px;
 }
@@ -537,14 +535,12 @@ a:focus {
 
 @media (max-width: 600px) {
     header {
-        height: 120px; /* Adjusted header height for mobile */
+        height: 160px; /* Increased header height for larger mobile logo */
     }
 
     .header-logo img {
-        max-width: 250px; /* Adjusted max-width for mobile */
-        max-height: 120px; /* Adjusted max-height for mobile */
-        width: 100%;
-        height: auto;
+        width: 350px; /* 3x wider on mobile */
+        height: 325px; /* 3x taller on mobile */
         object-fit: contain;
     }
 
@@ -559,7 +555,7 @@ a:focus {
     }
 
     .home-slider {
-        margin-top: 70px;
+        margin-top: 260px; /* Match increased mobile header height */
     }
 
     .footer-logo img {
