@@ -120,9 +120,9 @@ header.active {
 }
 
 .header-logo img {
-    max-width: 500px;
-    max-height: 450px;
-    width: 400%;
+    max-width: 500px; /* Adjusted max-width for desktop */
+    max-height: 250px; /* Adjusted max-height for desktop */
+    width: 100%;
     height: auto;
     object-fit: contain;
     border-radius: 6px;
@@ -537,12 +537,12 @@ a:focus {
 
 @media (max-width: 600px) {
     header {
-        height: 70px; /* Adjust header height for larger logo */
+        height: 120px; /* Adjusted header height for mobile */
     }
 
     .header-logo img {
-        max-width: 250px; /* Larger max-width for mobile */
-        max-height: 250px; /* Larger max-height for mobile */
+        max-width: 250px; /* Adjusted max-width for mobile */
+        max-height: 120px; /* Adjusted max-height for mobile */
         width: 100%;
         height: auto;
         object-fit: contain;
