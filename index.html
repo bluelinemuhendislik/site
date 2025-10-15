@@ -23,27 +23,31 @@
 
 <body>
   <!-- HEADER -->
-  <header>
-    <div class="mycontainer d-flex justify-content-between align-items-center py-2">
-      <div class="header-logo">
-        <a href="#"><img src="content/images/bluelinefoto.png" alt="Blue Line Otomasyon Logo"
-            style="margin-top: 30px;" /></a>
-      </div>
-      <nav class="header-nav d-none d-md-block">
-        <ul class="d-flex gap-3 list-unstyled mb-0">
-          <li><a href="#corporate">KURUMSAL</a></li>
-          <li><a href="#services">HİZMETLER</a></li>
-          <li><a href="#sector">SEKTÖRLER</a></li>
-          <li><a href="#contact">İLETİŞİM</a></li>
-        </ul>
-      </nav>
-      <div class="mini-menu-btn d-md-none" onclick="showmenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+<header>
+  <div class="mycontainer d-flex justify-content-between align-items-center py-2">
+    <div class="header-logo">
+      <a href="#">
+        <img src="content/images/bluelinefoto.png" alt="Blue Line Otomasyon Logo" class="logo-img" />
+      </a>
     </div>
-  </header>
+
+    <nav class="header-nav d-none d-md-block">
+      <ul class="d-flex gap-3 list-unstyled mb-0">
+        <li><a href="#corporate">KURUMSAL</a></li>
+        <li><a href="#services">HİZMETLER</a></li>
+        <li><a href="#sector">SEKTÖRLER</a></li>
+        <li><a href="#contact">İLETİŞİM</a></li>
+      </ul>
+    </nav>
+
+    <!-- <div class="mini-menu-btn d-md-none" onclick="showmenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div> -->
+  </div>
+</header>
+
 
   <!-- MINI MENU -->
   <div class="mini-menu">
@@ -173,7 +177,7 @@ background: rgba(0,0,0,0.5); z-index: 9999; align-items: center; justify-content
           <div class="corporate-text">
             <h2>Kurumsal</h2>
             <p>
-            <h4>Otomasyonla Verimlilik, Teknolojiyle Gelecek yazdır renkli</h4>
+            <h4><b>Otomasyonla Verimlilik, Teknolojiyle Gelecek yazdır</b>  </h4>
             Firmamız, endüstriyel otomasyon ve elektrik sistemleri alanında
             faaliyet gösteren, müşteri odaklı ve teknolojiye yön veren bir
             mühendislik firmasıdır. Kurulduğumuz günden bu yana, sanayi
@@ -285,7 +289,7 @@ background: rgba(0,0,0,0.5); z-index: 9999; align-items: center; justify-content
           <div class="home-work-box">
             <div class="home-work-box-image">
               <img src="content/images/resimler/ServeMotor.jpg" alt="Proje Danışmanlığı ve Teknik Destek" />
-              <div class="home-work-num">7</div>
+              <div class="home-work-num"></div>
             </div>
             <div class="home-work-box-text">
               <h5>AC-DC SERVOMOTOR DÖNÜŞÜMLERİ</h5>
@@ -454,19 +458,25 @@ background: rgba(0,0,0,0.5); z-index: 9999; align-items: center; justify-content
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-dark text-secondary py-4">
-    <div class="mycontainer container text-center">
-      <img src="content/images/bluelinefoto.png" alt="Blue Line Otomasyon Logo" class="mb-3"
-        style="max-height: 350px;" />
-      <p>Copyright © 2025, Tüm Hakları Saklıdır.</p>
-      <div class="footer-social">
-        <a href="#" class="text-secondary me-3"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="text-secondary me-3"><i class="fab fa-instagram"></i></a>
-        <a href="#" class="text-secondary me-3"><i class="fab fa-x-twitter"></i></a>
-        <a href="#" class="text-secondary"><i class="fab fa-linkedin-in"></i></a>
-      </div>
+<footer class="bg-dark text-secondary py-4">
+  <div class="container text-center">
+    <img 
+      src="content/images/bluelinefoto.png" 
+      alt="Blue Line Otomasyon Logo" 
+      class="footer-logo img-fluid mb-3"
+    />
+    <p>Copyright © 2025, Tüm Hakları Saklıdır.</p>
+    <div class="footer-social">
+      <a href="#" class="text-secondary me-3"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="text-secondary me-3"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="text-secondary me-3"><i class="fab fa-x-twitter"></i></a>
+      <a href="#" class="text-secondary"><i class="fab fa-linkedin-in"></i></a>
     </div>
-  </footer>
+  </div>
+</footer>
+
+
+
 
   <!-- JS -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
